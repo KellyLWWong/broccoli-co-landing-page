@@ -1,4 +1,4 @@
-describe('empty spec', () => {
+describe('form-validation-unit-test', () => {
   beforeEach(() => {
     // set default url
     cy.visit('http://localhost:3000/')
@@ -56,3 +56,5 @@ describe('empty spec', () => {
     cy.get('p[id="error-backend"]').should('have.text', 'This email address is already in use')
   })
 })
+
+export {}

@@ -1,4 +1,4 @@
-describe('empty spec', () => {
+describe('invite-modal-e2e-test', () => {
   beforeEach(() => {
     // set default url
     cy.visit('http://localhost:3000/')
@@ -79,3 +79,5 @@ describe('empty spec', () => {
     cy.contains('OK').click()
   })
 })
+
+export {}
