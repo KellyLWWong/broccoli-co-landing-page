@@ -14,9 +14,9 @@ function validateForm(
   const emailRegex = RegExp(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
 
   // check if full name is populated and longer than 3 characters
-  if (!inputValues.fullName) {
+  if (!inputValues.fullName.trim()) {
     errors.fullName = "Full name is required";
-  } else if (inputValues.fullName.length < 3) {
+  } else if (inputValues.fullName.trim().length < 3) {
     // console.log('Names less than 3 chars')
     errors.fullName = "Full name needs to be at least 3 characters long :(";
   }

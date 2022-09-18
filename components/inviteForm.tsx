@@ -37,7 +37,7 @@ function InviteForm(props: {
               type="text"
               name="fullName"
               onChange={props.handleChange}
-              value={props.inputValues.fullName.trim()}
+              value={props.inputValues.fullName}
               className="w-full px-6 py-2 text-sm border border-green-600 outline-none rounded-3xl md:text-base focus:ring-2 focus:ring-green-600"
             ></input>
             {props.validation.fullName && (

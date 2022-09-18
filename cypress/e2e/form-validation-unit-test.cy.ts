@@ -26,7 +26,7 @@ describe('form-validation-unit-test', () => {
 
 
   it('Email is not valid format submission', () => {
-    cy.get('input[placeholder="Full Name"]').type('abc')
+    cy.get('input[placeholder="Full Name"]').type('abc def')
     cy.get('input[placeholder="Email"]').type('success.emailgmail.com')
     cy.get('input[placeholder="Confirm Email"]').type('success.emailgmail.com')
 
@@ -37,7 +37,7 @@ describe('form-validation-unit-test', () => {
 
 
   it('Confirm email doesn\'t match submission', () => {
-    cy.get('input[placeholder="Full Name"]').type('abc')
+    cy.get('input[placeholder="Full Name"]').type('abc def')
     cy.get('input[placeholder="Email"]').type('success.email@gmail.com')
     cy.get('input[placeholder="Confirm Email"]').type('fail.email@gmail.com')
 
@@ -47,11 +47,11 @@ describe('form-validation-unit-test', () => {
   })
 
   it('Form valid but used email submission', () => {
-    cy.get('input[placeholder="Full Name"]').type('abc')
+    cy.get('input[placeholder="Full Name"]').type('abc def')
     cy.get('input[placeholder="Email"]').type('usedemail@blinq.app')
     cy.get('input[placeholder="Confirm Email"]').type('usedemail@blinq.app')
 
-    cy.contains('Send', {timeout: 5000}).click()
+    cy.contains('Send', {timeout: 10000}).click()
 
     cy.get('p[id="error-backend"]').should('have.text', 'This email address is already in use')
   })
