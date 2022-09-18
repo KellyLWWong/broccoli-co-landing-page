@@ -12,9 +12,10 @@ Run development environment
 npm run dev
 ```
 
-Build site
+Build site and preview it
 ```
 npm run build
+npm run start
 ```
 
 ## Testing
